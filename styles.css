@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.subject-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.download-button {
+    background-color: #2196F3;
+}
+
+.download-button:hover {
+    background-color: #1976D2;
+}
+
+.reset-button {
+    background-color: #f44336;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f;
+}
+
+#timetable {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Added for fixed column widths */
+}
+
+#timetable th, 
+#timetable td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    overflow: hidden; /* Added to handle overflow */
+    text-overflow: ellipsis; /* Added to handle overflow */
+    white-space: nowrap; /* Added to prevent text wrapping */
+    font-size: 14px; /* Added for consistent font size */
+}
+
+#timetable th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* Added width for time column */
+#timetable th:first-child,
+#timetable td:first-child {
+    width: 80px;
+}
+
+/* Added equal width for day columns */
+#timetable th:not(:first-child),
+#timetable td:not(:first-child) {
+    width: calc((100% - 80px) / 7); /* Divides remaining space equally */
+}
+
+#timetable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style for week headers */
+#timetable th[colspan] {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.break {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Added style for empty cells */
+#timetable td:empty,
+#timetable td:only-child {
+    background-color: #f8f8f8;
+}
+
+input, 
+select {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.settings-group {
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: #666;
+}
